@@ -1,0 +1,196 @@
+/* menu */
+.menu{
+    height: 80px;
+}
+a{
+    text-decoration: none !important;
+}
+a:active{
+    color: #F58B63 !important;
+}
+
+.menu .nav-link {
+    color: #FFF;
+    font-family: Inter ;
+    text-align: center;
+    font-size: 24px ;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+
+}
+.menu .logo{
+    color: white;
+    font-family: Josefin Slab !important ;
+    font-size: 64px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 40px;
+    margin-top: 0px;
+    text-decoration: none;
+}
+.icon{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 24px;
+}
+.icon a{
+    margin-top: 40px;
+    padding-left:40px;
+    color: white;
+}
+/* end menu */
+/* content1 */
+.container{
+    margin-top: 40px ;
+}
+.container  h1{
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 30px;
+}
+.container .content-1 h2{
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.container .content-1 p{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.container .content-1 img{
+    width: 234px;
+    height: 247px;
+    display: flex;
+    margin: auto;
+    margin-top: 40px
+}
+.container .content-1  .button-content-1{
+    margin-top: 20px;
+    background-color: #DDC3AF;
+    border-color: #DDC3AF ;
+    margin-left: 140px;
+    width: 119px;
+    height: 39px;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    line-height: 30px;
+
+}
+.content-1 row{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/* end content1 */
+
+/* product */
+.product{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.product .container .card .card-body .btn {
+    background-color:#DDC3AF ;
+    color: #FFF;
+    font-weight: 400;
+}
+.text-content {
+    color: #BE7352;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;;
+}
+.button-product{
+    margin-top: 20px;
+    background-color: #DDC3AF !important;
+    margin-left: 500px;
+    width: 150px;
+    height: 55px;
+    display: flex;
+    color: white !important;
+    font-weight: 700 !important;
+    line-height: 30px;
+
+}
+/* end product */
+/* footer */
+.layoutFooter .footer-col-1 .footer-content{
+    margin-top: 10px;
+}
+.layoutFooter .footer-col-1 .logo{
+    color: white;
+    font-family: Josefin Slab !important ;
+    font-size: 64px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 40px;
+    margin-top: 0px;
+    text-decoration: none;
+}
+.layoutFooter{
+    padding: 40px 7% 0 7% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    background-color: black;
+    font-weight: 700;
+}
+.fz-16{
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+    color:white;
+}
+
+.fz-14{
+    font-size: 14px;
+    line-height: 20px;
+    color:white ;
+}
+.footer-col-3 .footer-form a{
+    width: 48px;
+    height: 42px;
+    border-radius: 8px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.layoutFooter .footer-col-3 .footer-form{
+    background-color: white;
+    height: 50px;
+    padding: 0 5px 0 20px;
+    border-radius: 8px;
+    display: flex;
+    margin-top: 10px;
+
+}
+.footer-content a{
+    color: rgba(255,255,255,.6);
+    text-decoration: none;
+}
+.layoutFooter .footer-col-3 .footer-input-email {
+    width: 100%;
+    height: 50px;
+    border: none;
+}
+ul {
+    list-style-type: none;
+}
+/* end footer */

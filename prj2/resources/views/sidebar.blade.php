@@ -1,20 +1,3 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('assets/css/category.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Add a product</title>
-</head>
-
-<body>
-
-{{-- Sidebar --}}
 <nav class="sidebar">
     <header>
         <div class="image-text">
@@ -44,7 +27,7 @@
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a href="{{ route('products.index') }}">
                         <i class='bx bxl-product-hunt icon'></i>
                         <span class="text nav-text">Sản phẩm</span>
                     </a>
@@ -62,7 +45,7 @@
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" style="background-color: #BE7352">
+                    <a href="{{ route('categories.index') }}" style="background-color: #BE7352">
                         <i class='bx bx-category icon'></i>
                         <span class="text nav-text">Danh mục</span>
                     </a>
@@ -72,7 +55,7 @@
 
         <div class="bottom-content">
             <li class="">
-                <a href="#">
+                <a href="{{route('customers.logout')}}">
                     <i class='bx bx-log-out icon'></i>
                     <span class="text nav-text">Logout</span>
                 </a>
@@ -80,26 +63,3 @@
         </div>
     </div>
 </nav>
-
-{{-- main --}}
-<section id="content" style="margin-top: 30px">
-    <h2 style="text-align: center">Thêm sản phẩm</h2>
-    <form method="post" action="{{ route('products.store') }}" class="add-category-form" enctype="multipart/form-data">
-        @csrf
-        Tên sản phẩm: <input type="text" name="name"  required><br>
-        Hình ảnh: <input type="file" name="image"  required><br>
-        Giá tiền: <input type="text" name="price"  required><br>
-        Danh mục: <select name="cate_id">
-            @foreach ($categories as $category)
-                <option value="{{ $category->id }}">
-                    {{ $category->name }}
-                </option>
-            @endforeach
-        </select> <br>
-        <button>Thêm</button>
-
-    </form>
-</section>
-</body>
-
-</html>

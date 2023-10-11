@@ -115,7 +115,7 @@ class ProductController extends Controller
         $array = Arr::add($array, 'image', $image_name);
 //        dd($array);
         //lay dl tu form va luu len db
-        Product::create($array);
+        $product->update($array);
         //quay lai danh sach
         return Redirect::route('products.index');
     }

@@ -17,7 +17,8 @@ class CustomerFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'email' => $this->faker->email,
+            'password'=> bcrypt('123456'),
         ];
     }
 }

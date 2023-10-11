@@ -1,0 +1,21 @@
+.bill-content{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.bill-content .bill-content-right {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.bill-content .bill-content-right .form-label{
+    font-weight: 600;
+}
+.button-bill{
+    margin-top: 20px;
+    background-color:#F58B63 !important;
+    width: 150px;
+    height: 55px;
+    display: flex;
+    color: white !important;
+    font-weight: 700 !important;
+    line-height: 30px;
+}

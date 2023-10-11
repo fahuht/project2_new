@@ -1,0 +1,15 @@
+.btn-success-product{
+    margin-top: 20px;
+    background-color:#F58B63 !important;
+    width: 150px;
+    height: 55px;
+    display: flex;
+    color: white !important;
+    font-weight: 700 !important;
+    line-height: 30px;
+}
+.border-success-product{
+    border-color: #F58B63 !important;
+    border-width: 2px; /* Đặt độ rộng của biên thành 2 pixel */
+    border-style: solid;
+}

@@ -16,9 +16,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/product',function (){
+    return view('product');
+});
+Route::get('/product-detail',function (){
+    return view('product_detail');
+});
+Route::get('/bill',function (){
+    return view('bill');
+});
+Route::get('/success',function (){
+    return view('success');
+});
+Route::get('/stores',function (){
+    return view('stores');
+});
+Route::get('/contact',function (){
+    return view('contact');
+});
+//login
+Route::get('/login-customer', [\App\Http\Controllers\CustomerController::class,'login'])->name('customers.login');
+Route::post('/login-customer', [\App\Http\Controllers\CustomerController::class,'loginProcess'])->name('customers.loginProcess');
+//logout
+Route::get('/logout-customer',[\App\Http\Controllers\CustomerController::class, 'logout'])->name('customers.logout');
 
-
-Route::prefix('/categories')->group(function () {
+Route::middleware('checkLoginCustomer')->prefix('/categories')->group(function () {
     //Route read
     Route::get('/', [\App\Http\Controllers\CategoryController::class, 'index'])->name('categories.index');
     //route hiển thị form thêm brand

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class CustomerController extends Controller
 {
@@ -62,5 +65,27 @@ class CustomerController extends Controller
     public function destroy(Customer $customers)
     {
         //
+    }
+    public function login(){
+        return view('customers.login');
+    }
+    public function loginProcess(Request $request){
+        $account = $request->only(['email', 'password']);
+        if (Auth::guard('customer')->attempt($account)){
+            //lay thong tin cua cus dang login
+            $customer = Auth::guard('customer')->user();
+            Auth::guard('customer')->login($customer);
+            session(['customer'=>$customer]);
+            return Redirect::route('categories.index');
+//            dd($customer);
+            //cho login
+        }else{
+            //quay ve trang login
+            return Redirect::back();
+        }
+    }
+    public function logout(){
+        Auth::guard('customer')->logout();
+        return Redirect::route('customers.login');
     }
 }

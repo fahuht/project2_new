@@ -1,0 +1,34 @@
+.content{
+    display: grid;
+}
+/* content left */
+.content-left-product .list-group{
+    border: none;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+@media (min-width: 1200px) {
+    .content-left-product .list-group{
+        border: none;
+        position: fixed;
+        top: 150px;
+        left: 90px;
+        width: 300px;
+
+    }
+}
+/* product */
+.content-right-product .product .card .card-body .btn{
+    background-color: #DDC3AF;
+    color: white;
+}
+.content-right-product .product {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+

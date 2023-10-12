@@ -55,47 +55,7 @@
     <!-- End content1 -->
     <!-- product -->
     <h1>CÁC DÒNG SẢN PHẨM NỔI BẬT</h1>
-    <div class="product">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/size-vuong-02.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Phê Truffle</h5>
-                            <h5 class="text-content"> 50.000 đ</h5>
-                            <a href="" class="btn ">CHI TIẾT</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="images/size-vuong-02.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Phê Truffle</h5>
-                                <h5 class="text-content"> 50.000 đ</h5>
-                                <a href="#" class="btn ">CHI TIẾT</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="images/size-vuong-02.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Phê Truffle</h5>
-                                <h5 class="text-content"> 50.000 đ</h5>
-                                <a href="#" class="btn">CHI TIẾT</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="click" class="btn button-product display: flex flex-wrap: wrap">XEM THÊM</button>
-        </div>
-    </div>
+@include('list_product')
     <!-- End product -->
 </div>
 <!-- End Content -->

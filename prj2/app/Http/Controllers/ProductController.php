@@ -21,7 +21,7 @@ class ProductController extends Controller
         //lay dl tu bang products
         $products = Product::with('category')->get();
         //tra lai view
-        return view('Product.index', [
+        return view('Product.index', compact('products'), [
             'products' => $products
         ]);
     }
@@ -69,7 +69,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $product = Product::find($product);
+        return view('product', compact('product'));
     }
 
     /**
@@ -131,5 +132,10 @@ class ProductController extends Controller
         $product->delete();
         //quay ve danh sach
         return Redirect::route('products.index');
+    }
+    public function product(){
+        $products = Product::all();
+        // print_r($products);
+        return view('product', compact('products'));
     }
 }
